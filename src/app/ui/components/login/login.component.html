@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+            <div class="form-group">
+                <label for="user">User name</label>
+                <input #txtUsernameOrEmail type="text" class="form-control" id="userName" placeholder="Enter your name or email here">
+                <small class="form-text text-muted invalid-feedback">Please enter the user name.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input #txtPassword type="password" class="form-control" id="password" placeholder="Enter password here">
+            </div>
+
+            <asl-google-signin-button></asl-google-signin-button>
+            <img src = "../../../../assets/facebook.png" style="position:fixed; cursor: pointer;" (click)="facebookLogin()"  />
+            <br/><br/>
+
+            <button type="submit" style="margin-top: 10px;" class="btn btn-primary" (click)="login(txtUsernameOrEmail.value, txtPassword.value)">Sign in</button>
+
+            <a style="margin-top:5px;margin-left:5px;" routerLink="/password-reset" class="btn btn-secondary">Forgot password</a>
+
+    </div>
+    <div class="col-md-3"></div>
+</div>
